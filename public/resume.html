@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurav Kumar | Resume</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #4b5563;
+      --rule: #cbd5e1;
+      --accent: #1d4ed8;
+      --paper: #ffffff;
+      --screen: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--screen);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.6pt;
+      line-height: 1.28;
+      background: var(--screen);
+    }
+
+    .print-toolbar {
+      display: flex;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .print-btn {
+      border: 0;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      font: 700 14px Arial, sans-serif;
+      padding: 10px 18px;
+    }
+
+    .print-btn:hover {
+      background: #1e40af;
+    }
+
+    .resume-container {
+      width: min(8.27in, calc(100vw - 28px));
+      min-height: 11.69in;
+      margin: 0 auto 28px;
+      padding: 0.46in 0.54in;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.14);
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--ink);
+    }
+
+    .header h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .target-role {
+      margin: 4px 0 0;
+      color: var(--accent);
+      font-size: 11pt;
+      font-weight: 700;
+    }
+
+    .contact {
+      margin: 5px auto 0;
+      color: var(--muted);
+      font-size: 9.7pt;
+      line-height: 1.25;
+      max-width: 7.1in;
+    }
+
+    .section {
+      margin-top: 11px;
+    }
+
+    .section-title {
+      margin: 0 0 5px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink);
+      font-size: 11.2pt;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      color: #1f2937;
+    }
+
+    .item {
+      margin-top: 7px;
+    }
+
+    .item:first-of-type {
+      margin-top: 0;
+    }
+
+    .item-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 9.6pt;
+      font-weight: 700;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .subline {
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 9.8pt;
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 3px 0 0;
+      padding-left: 16px;
+    }
+
+    li {
+      margin: 1px 0;
+      padding-left: 2px;
+    }
+
+    .skills-list {
+      display: block;
+    }
+
+    .skill-row {
+      margin: 2px 0;
+    }
+
+    .skill-row strong {
+      color: var(--ink);
+    }
+
+    .education-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 5px;
+    }
+
+    .education-line:first-of-type {
+      margin-top: 0;
+    }
+
+    .education-detail {
+      color: var(--muted);
+      font-size: 9.7pt;
+      font-weight: 700;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @page {
+      size: A4;
+      margin: 0.42in;
+    }
+
+    @media print {
+
+      html,
+      body {
+        background: #fff;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        line-height: 1.24;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .print-toolbar {
+        display: none;
+      }
+
+      .resume-container {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-top: 9px;
+      }
+
+      .item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .header h1 {
+        font-size: 20pt;
+      }
+
+      .section-title {
+        font-size: 10.8pt;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 11pt;
+      }
+
+      .resume-container {
+        width: calc(100vw - 20px);
+        min-height: auto;
+        padding: 28px 22px;
+      }
+
+      .header h1 {
+        font-size: 22pt;
+      }
+
+      .item-header,
+      .education-line {
+        display: block;
+      }
+
+      .item-meta,
+      .education-detail {
+        display: block;
+        margin-top: 1px;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="print-toolbar">
+    <button class="print-btn" onclick="printResume()">Download / Print Resume</button>
+  </div>
+
+  <main class="resume-container">
+    <header class="header">
+      <h1>Saurav Kumar</h1>
+      <p class="target-role">Software Developer</p>
+      <p class="contact">
+        Noida / Delhi NCR | 7462906007 | <a href="mailto:sauravsinha239@gmail.com">sauravsinha239@gmail.com</a> | <a
+          href="https://www.linkedin.com/in/sauravsinha239">linkedin.com/in/sauravsinha239</a> | <a
+          href="https://github.com/sauravsinha239">github.com/sauravsinha239</a>
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="summary-title">
+      <h2 class="section-title" id="summary-title">Professional Summary</h2>
+      <p class="summary">
+        Software Developer with 1+ year of experience building enterprise applications, REST APIs, mobile apps, and
+        computer vision automation systems. Developed and deployed internal applications on IIS servers, built workflow
+        automation tools, and worked with Flutter, ASP.NET, MSSQL, Python, Docker, AWS, Nginx, CI/CD, and Linux.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="experience-title">
+      <h2 class="section-title" id="experience-title">Work Experience</h2>
+
+
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">Software Developer</div>
+          <div class="item-meta">Apr 2025 - Present</div>
+        </div>
+        <p class="subline">The Institute of Company Secretaries of India, Noida</p>
+        <ul>
+          <ul>
+            <li>Developed internal applications to automate examination workflows and reduce repetitive manual
+              processing.</li>
+            <li>Built REST APIs with ASP.NET, ADO.NET, and MSSQL for internal business systems.</li>
+            <li>Created Flutter and Android applications supporting internal communication and operational processes.
+            </li>
+            <li>Deployed and maintained internal applications on IIS servers and resolved production issues.</li>
+            <li>Reduced manual OMR verification effort by 95% by implementing YOLO and OpenCV-based automation.</li>
+          </ul>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title">Projects</h2>
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">Examiner Portal</div>
+          <div class="item-meta">ASP.NET | MSSQL | JS |SignalR | QR Authentication</div>
+        </div>
+
+        <ul>
+          <li>Built a portal for examiner onboarding, biodata submission, and offer acceptance.</li>
+          <li>Integrated live face verification using desktop/laptop webcams.</li>
+          <li>Created a QR-based verification flow for users without webcams or with poor camera quality.</li>
+          <li>Enabled mobile face capture and real-time image sync using SignalR.</li>
+          <li>Reduced manual verification efforts and improved processing speed.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">OMR Detection System</div>
+          <div class="item-meta">Python | YOLO | OpenCV | EfficientNetV2</div>
+        </div>
+        <ul>
+          <li>Built an automated OMR processing system to detect filled bubbles and extract roll number, subject code,
+            and centre code from scanned answer sheets.</li>
+          <li>Implemented page number detection and missing sequence validation using YOLO and EfficientNetV2, achieving
+            95% accuracy while reducing manual verification workload by 95% and saving processing time.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">Exam Admin Application</div>
+          <div class="item-meta">Flutter | GetX | Rest API | ASP.NET | MSSQL</div>
+        </div>
+
+        <ul>
+          <li>Built internal Flutter application for ICSI exam department operations.</li>
+          <li>Implemented secure real-time messaging between departments.</li>
+          <li>Developed answer-book tracking system.</li>
+          <li>Built manpower monitoring and center payment tracking modules.</li>
+          <li>Created expense logs and live operational dashboards.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">Caller ID Application</div>
+          <div class="item-meta">Android (Java) | ASP.NET | MSSQL</div>
+        </div>
+        <ul>
+          <li>Built a Truecaller-like Caller ID app using native Android (Java) to detect incoming calls and display
+            overlay caller details.</li>
+          <li>Integrated internal APIs with MSSQL database to validate phone numbers and fetch user information in real
+            time.</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <div class="item-header">
+          <div class="item-title">Cab Booking Application</div>
+          <div class="item-meta">Flutter | Firebase | Google Maps API</div>
+        </div>
+        <ul>
+          <li>Built a complete ride-booking workflow with authentication, trip management, and real-time tracking.</li>
+          <li>Integrated Firebase Cloud Messaging and Google Maps for notifications, routing, and location updates.</li>
+        </ul>
+      </article>
+
+
+
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Technical Skills</h2>
+      <div class="skills-list">
+        <p class="skill-row"><strong>Languages:</strong> C, C++, Java, Python,JavaScript, Dart, SQL</p>
+        <p class="skill-row"><strong>Frameworks &amp; Platforms:</strong> Flutter, ASP.NET, ADO.NET, Android SDK</p>
+        <p class="skill-row"><strong>Databases:</strong> MSSQL, MySQL, Firebase, MongoDB</p>
+        <p class="skill-row"><strong>Cloud &amp; DevOps:</strong> AWS, Docker, VPS, IIS, Nginx, CI/CD</p>
+        <p class="skill-row"><strong>AI &amp; Computer Vision:</strong> YOLO, OpenCV, EfficientNetV2, MobileNetV2/v3</p>
+        <p class="skill-row"><strong>Systems &amp; Tools:</strong> Linux Administration, Troubleshooting</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Education</h2>
+
+      <div class="education-line">
+        <p><strong>MCA, SRM Institute of Science &amp; Technology</strong></p>
+        <p class="education-detail">CGPA: 8.18 | 2023 - 2025</p>
+      </div>
+
+      <div class="education-line">
+        <p><strong>BCA, Maulana Mazharul Haque Arabic &amp; Persian University</strong></p>
+        <p class="education-detail"> 62% | 2018 - 2021</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function printResume() {
+      window.print();
+    }
+  </script>
+
+</body>
+
+</html>
