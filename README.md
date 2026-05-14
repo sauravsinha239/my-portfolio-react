@@ -1,1 +1,2 @@
-hey this is url to access my portfolio [clikc](https://portfolio-sauravsinha239.netlify.app/)
+## Live Preview
+Check out my portfolio here: [View Live Site](https://portfolio-sauravsinha239.netlify.app/)
